@@ -527,7 +527,7 @@ const FormSearch = <T, U = {}>({
                   initialValues={columnsList.reduce(
                     (pre, item) => {
                       const key = genColumnKey(item.key, item.dataIndex) || '';
-                      if (item.initialValue) {
+                      if (item.initialValue !== undefined) {
                         return {
                           ...pre,
                           [key]: item.initialValue,
